@@ -675,6 +675,7 @@ id alertTitle
 id all
 id always
 id async
+id bar_chart
 id barrier
 id beginning
 id blocking
