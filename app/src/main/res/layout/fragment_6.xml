@@ -3,6 +3,14 @@
     android:id="@+id/fragment_6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#0e2864">
 
+    <com.github.mikephil.charting.charts.BubbleChart
+        android:id="@+id/bubble_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="50dp">
+
+    </com.github.mikephil.charting.charts.BubbleChart>
 </LinearLayout>

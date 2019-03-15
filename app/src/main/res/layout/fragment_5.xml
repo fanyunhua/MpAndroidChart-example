@@ -3,6 +3,12 @@
     android:id="@+id/fragment_5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    android:background="#090">
+    <com.github.mikephil.charting.charts.HorizontalBarChart
+        android:id="@+id/h_bar_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="50dp">
+    </com.github.mikephil.charting.charts.HorizontalBarChart>
 </LinearLayout>

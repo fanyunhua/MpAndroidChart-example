@@ -680,6 +680,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id bubble_chart
 id buttonPanel
 id center
 id center_horizontal
@@ -716,6 +717,7 @@ id fragment_6
 id gone
 id group_divider
 id groups
+id h_bar_chart
 id home
 id homeAsUp
 id icon

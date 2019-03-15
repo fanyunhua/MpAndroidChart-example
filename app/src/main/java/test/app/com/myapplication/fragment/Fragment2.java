@@ -37,9 +37,9 @@ import test.app.com.myapplication.R;
 public class Fragment2 extends Fragment {
     private BarChart barChart;
     private List<String> chartTitle;
-    private List<BarEntry> chartData;
+    private List<BarEntry> chartData,chartData2;
     private final String title[] = new String[]{"2017","2018","2019"};
-    private BarDataSet barDataSet;
+    private BarDataSet barDataSet,barDataSet2;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -71,7 +71,7 @@ public class Fragment2 extends Fragment {
                     handler.sendEmptyMessage(0);
                     try {
                         Thread.currentThread().sleep(5000);
-                        chartData.clear();
+                        chartData.clear();chartData2.clear();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -85,7 +85,16 @@ public class Fragment2 extends Fragment {
         barDataSet = new BarDataSet(chartData,"");
         barDataSet.setValueFormatter(new PercentFormatter());//设置百分比显示
         barDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
-        BarData barData = new BarData(chartTitle,barDataSet);
+
+
+        barDataSet2 = new BarDataSet(chartData2,"");
+        barDataSet2.setValueFormatter(new PercentFormatter());//设置百分比显示
+        barDataSet2.setColors(ColorTemplate.COLORFUL_COLORS);
+
+        List<BarDataSet> list = new ArrayList<>();
+        list.add(barDataSet);
+        list.add(barDataSet2);
+        BarData barData = new BarData(chartTitle,list);
         barChart.setData(barData);
     }
 
@@ -93,6 +102,7 @@ public class Fragment2 extends Fragment {
         for (int i = 0; i <title.length ; i++)
         {
             chartData.add(new BarEntry(RandomData.getRandomData(),i));
+            chartData2.add(new BarEntry(RandomData.getRandomData(),i));
         }
     }
 
@@ -111,5 +121,6 @@ public class Fragment2 extends Fragment {
         barChart = view.findViewById(R.id.bar_chart);
         chartData = new ArrayList<>();
         chartTitle = new ArrayList<>();
+        chartData2 = new ArrayList<>();
     }
 }
