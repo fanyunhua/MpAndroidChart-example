@@ -21,6 +21,7 @@ import com.github.mikephil.charting.data.LineDataSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import test.app.com.myapplication.Data.RandomData;
 import test.app.com.myapplication.R;
 /**
  *
@@ -111,8 +112,16 @@ public class Fragment1 extends Fragment {
     }
     void initData()
     {
-        data = new float[]{((float)(Math.random()*10)),((float)(Math.random()*10)),((float)(Math.random()*10)),((float)(Math.random()*10)),((float)(Math.random()*10))};
-        data2 = new float[]{((float)(Math.random()*10)),((float)(Math.random()*10)),((float)(Math.random()*10)),((float)(Math.random()*10)),((float)(Math.random()*10))};
+        data = new float[]{RandomData.getRandomData(),
+                RandomData.getRandomData(),
+                RandomData.getRandomData(),
+                RandomData.getRandomData(),
+                RandomData.getRandomData()};
+        data2 = new float[]{RandomData.getRandomData()
+                ,RandomData.getRandomData()
+                ,RandomData.getRandomData()
+                ,RandomData.getRandomData(),
+                RandomData.getRandomData()};
         for (int i = 0; i <data.length ; i++)
         {
             chartData.add(new Entry(data[i],i));  // 添加数据
