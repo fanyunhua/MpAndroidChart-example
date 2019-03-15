@@ -745,6 +745,7 @@ id packed
 id parent
 id parentPanel
 id percent
+id pie_chart
 id progress_circular
 id progress_horizontal
 id radio

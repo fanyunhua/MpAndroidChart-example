@@ -83,7 +83,7 @@ public class Fragment2 extends Fragment {
 
     private void setChartData() {
         barDataSet = new BarDataSet(chartData,"");
-//        barDataSet.setValueFormatter(new PercentFormatter());//设置百分比显示
+        barDataSet.setValueFormatter(new PercentFormatter());//设置百分比显示
         barDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
         BarData barData = new BarData(chartTitle,barDataSet);
         barChart.setData(barData);
