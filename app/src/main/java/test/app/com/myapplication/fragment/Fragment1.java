@@ -1,6 +1,7 @@
 package test.app.com.myapplication.fragment;
 
 import android.graphics.Color;
+import android.graphics.YuvImage;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,7 +14,9 @@ import android.view.ViewGroup;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.LimitLine;
 import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
@@ -108,6 +111,16 @@ public class Fragment1 extends Fragment {
         legend.setPosition(Legend.LegendPosition.BELOW_CHART_RIGHT); //设置图例位置
         XAxis xAxis = lineChart.getXAxis(); //设置x轴
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);  //设置x轴在下方显示
+
+        LimitLine limitLine = new LimitLine(2f,"x");
+        limitLine.setLineColor(Color.GREEN);
+        xAxis.addLimitLine(limitLine);
+
+        YAxis yAxis = lineChart.getAxisLeft();
+        LimitLine limitLine2 = new LimitLine(4f,"y");
+        limitLine2.setLineColor(Color.RED);
+        yAxis.addLimitLine(limitLine2);
+
 
     }
     void initData()

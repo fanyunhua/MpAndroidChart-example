@@ -115,6 +115,7 @@ public class Fragment2 extends Fragment {
 
         XAxis xAxis = barChart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);//设置x轴在下方显示
+
     }
 
     private void initView(View view) {

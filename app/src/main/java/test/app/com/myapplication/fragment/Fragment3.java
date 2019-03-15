@@ -71,7 +71,7 @@ public class Fragment3 extends Fragment {
                     handler.sendEmptyMessage(0);
                     try {
                         Thread.currentThread().sleep(5000);
-                        chartData.clear();
+                        chartData.clear();pieDataSet.clear();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
